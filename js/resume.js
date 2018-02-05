@@ -25,4 +25,22 @@
     target: '#sideNav'
   });
 
+  $("#age").text(ageCalc(1996,11,24));
+
 })(jQuery); // End of use strict
+
+function ageCalc(year, month, day) {
+  var d = new Date;
+  
+  year = +year;
+  month = +month,
+  day = +day,
+
+  age = d.getFullYear() - year;
+
+  if (d.getMonth() + 1 < month || d.getMonth() + 1 == month && d.getDate() < day) {
+      age--;
+  }
+
+  return age < 0 ? 0 : age;
+}
