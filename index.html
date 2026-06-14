@@ -1,453 +1,290 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Leonardo H. Batista</title>
+  <meta name="description" content="Leonardo H. Batista — Solutions Architect &amp; Tech Lead" />
+  <link rel="icon" href="img/favicon.ico" />
+  <script>
+    // Apply dark mode before paint to avoid flash
+    if (localStorage.getItem('theme') === 'dark' ||
+        (!localStorage.getItem('theme') && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+      document.documentElement.classList.add('dark');
+    }
+  </script>
+  <link rel="stylesheet" href="dist/output.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="dist/fa.min.css" />
+  <link rel="stylesheet" href="dist/devicon.min.css" />
+</head>
+<body class="bg-white dark:bg-gray-950 text-gray-900 dark:text-gray-100 font-sans transition-colors duration-300">
 
-  <head>
-
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="description" content="">
-    <meta name="author" content="">
-
-    <title>Leonardo H. Batista</title>
-
-    <!-- Favicon -->
-    <link rel="icon" href="img/favicon.ico">
-
-    <!-- Bootstrap core CSS -->
-    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-
-    <!-- Custom fonts for this template -->
-    <link href="https://fonts.googleapis.com/css?family=Saira+Extra+Condensed:100,200,300,400,500,600,700,800,900" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.10.1/devicon.min.css">
-    <script src="https://kit.fontawesome.com/c8b1aa8fc9.js" crossorigin="anonymous"></script>
-    <link href="vendor/simple-line-icons/css/simple-line-icons.css" rel="stylesheet">
-
-    <!-- Custom styles for this template -->
-    <link href="css/resume.css" rel="stylesheet">
-
-  </head>
-
-  <body id="page-top">
-
-    <nav class="navbar navbar-expand-lg navbar-dark bg-primary fixed-top" id="sideNav">
-      <a class="navbar-brand js-scroll-trigger" href="#page-top">
-        <span class="d-block d-lg-none">Leonardo H. Batista</span>
-        <span class="d-none d-lg-block">
-          <img class="img-fluid img-profile rounded-circle mx-auto mb-2" src="img/profile.jpg" alt="">
-        </span>
-      </a>
-      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarSupportedContent">
-        <ul class="navbar-nav">
-          <li class="nav-item">
-            <a class="nav-link js-scroll-trigger" href="#about">Sobre</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link js-scroll-trigger" href="#education">Formação</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link js-scroll-trigger" href="#experience">Experiência</a>
-          </li>          
-          <li class="nav-item">
-            <a class="nav-link js-scroll-trigger" href="#skills">Habilidades</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link js-scroll-trigger" href="#courses">Cursos</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link js-scroll-trigger" href="#extra">Extracurriculares</a>
-          </li>
-        </ul>
-      </div>
-    </nav>
-
-    <div class="container-fluid p-0">
-      <section class="resume-section p-3 p-lg-5 d-flex d-column" id="about">
-        <div class="my-auto">
-          <h1 class="mb-0">
-            <span class="text-primary">Leonardo</span> H. Batista
-          </h1>
-          <div class="subheading mb-5">
-            Av. João Scarparo Netto, 240, Campinas-SP<br>
-            (19) 98991-9009<br>
-            <span id="age"><!-- JS code will add the age automatically here --></span> anos<br>
-            <a href="mailto:leonardohenriquebatista@gmail.com">leonardohenriquebatista@gmail.com</a>
-          </div>
-          <!--<p class="mb-5"></p>-->
-          <ul class="list-inline list-social-icons mb-0">
-            <li class="list-inline-item" title="Facebook">
-              <a href="https://www.facebook.com/leonardohenrique.batista" target="_blank">
-                <span class="fa-stack fa-lg">
-                  <i class="fa fa-circle fa-stack-2x"></i>
-                  <i class="fa fa-facebook fa-stack-1x fa-inverse"></i>
-                </span>
-              </a>
-            </li>
-            <li class="list-inline-item" title="LinkedIn">
-              <a href="https://www.linkedin.com/in/leonardohenriquebatista/" target="_blank">
-                <span class="fa-stack fa-lg">
-                  <i class="fa fa-circle fa-stack-2x"></i>
-                  <i class="fa fa-linkedin fa-stack-1x fa-inverse"></i>
-                </span>
-              </a>
-            </li>
-            <li class="list-inline-item" title="GitHub">
-              <a href="https://github.com/leohbatista" target="_blank">
-                <span class="fa-stack fa-lg">
-                  <i class="fa fa-circle fa-stack-2x"></i>
-                  <i class="fa fa-github fa-stack-1x fa-inverse"></i>
-                </span>
-              </a>
-            </li>
-          </ul>
-        </div>
-      </section>
-
-      <section class="resume-section p-3 p-lg-5 d-flex flex-column" id="education">
-        <div class="my-auto">
-          <h2 class="mb-5">Formação Acadêmica</h2>
-
-          <div class="resume-item d-flex flex-column flex-md-row mb-5">
-            <div class="resume-content mr-auto">
-              <h3 class="mb-0">Universidade Estadual de Campinas - UNICAMP</h3>
-              <div class="subheading mb-3">Ciência de Computação</div>              
-              <p><a class="link js-scroll-trigger" href="https://www.dac.unicamp.br/sistemas/catalogos/grad/catalogo2020/curriculoPleno/cp42.html" target="_blank">Currículo Pleno</a></p>
-              <p><a class="link js-scroll-trigger" href="#extra">Atividades extracurriculares desenvolvidas</a></p>
-            </div>
-            <div class="resume-date text-md-right">
-              <span class="text-primary">Fevereiro/2015 - Janeiro/2021</span>
-            </div>
-          </div>
-
-          <div class="resume-item d-flex flex-column flex-md-row">
-            <div class="resume-content mr-auto">
-              <h3 class="mb-0">Colégio Técnico de Limeira - COTIL/UNICAMP</h3>
-              <div class="subheading mb-3">Técnico em Informática</div>
-              <p>Ensino Médio + Técnico integrado.</p>
-              <p>Atividades desenvolvidas:
-                <ul class="fa-ul mb-0">
-                  <li>
-                    <i class="fa-li fa fa-check" aria-hidden="true"></i>Monitor de Informática - Apoio didático aos alunos do curso e auxílio aos professores - 2014
-                  </li>                  
-                  <li>
-                    <i class="fa-li fa fa-check" aria-hidden="true"></i>Monitor de Inglês - Apoio didático aos alunos do Ensino Médio e auxílio aos professores - 2013
-                  </li>  
-                </ul>
-              </p>
-            </div>
-            <div class="resume-date text-md-right">
-              <span class="text-primary">2012 - 2014</span>
-            </div>
-          </div>
-
-        </div>
-      </section>
-
-      <section class="resume-section p-3 p-lg-5 d-flex flex-column" id="experience">
-        <div class="my-auto">
-          <h2 class="mb-5">Experiência Profissional</h2>
-          
-          <div class="resume-item d-flex flex-column mb-5">
-            <div class="d-flex flex-column flex-md-row">
-              <div class="resume-content mr-auto">
-                <h3 class="mb-0">Head de Tecnologia</h3>
-              </div>
-              <div class="resume-date text-md-right">
-                <span class="text-primary">Outubro/2020 - Presente</span>
-              </div>
-            </div>
-
-            <div class="d-flex flex-column flex-md-row">  
-              <div class="resume-content mr-auto">
-                <h3 class="mb-0">Engenheiro de Software</h3>
-                <div class="subheading mb-3">Capital Empreendedor</div>
-                <p>
-                  <ul class="fa-ul mb-0">
-                    <li>
-                      <i class="fa-li fa fa-check" aria-hidden="true"></i>Desenvolvimento Web - Angular, Node.JS, Typescript, Firebase, GCP
-                    </li>
-                    <li>
-                      <i class="fa-li fa fa-check" aria-hidden="true"></i>Gerenciamento de projetos - Identificação, especificação, priorização, atribuição, acompanhamento e revisão de tarefas
-                    </li>
-                    <li>
-                      <i class="fa-li fa fa-check" aria-hidden="true"></i>Gestão de softwares, ferramentas digitais e equipamentos da empresa - Inventário, compra e licenciamento
-                    </li>
-                    <li>
-                      <i class="fa-li fa fa-check" aria-hidden="true"></i>Gestão estratégica - Direcionamento técnico, tomada de decisão e negociação com parceiros tecnológicos
-                    </li>
-                    <li>
-                      <i class="fa-li fa fa-check" aria-hidden="true"></i>Automação de tarefas e processos
-                    </li>
-                  </ul>
-                </p>
-              </div>
-              <div class="resume-date text-md-right">
-                <span class="text-primary">Dezembro/2019 - Outubro/2020</span>
-              </div>
-            </div>
-          </div>
-
-          <div class="resume-item d-flex flex-column flex-md-row mb-5">
-            <div class="resume-content mr-auto">
-              <h3 class="mb-0">Desenvolvedor Fullstack</h3>
-              <div class="subheading mb-3">ClassApp</div>
-              <p>
-                <ul class="fa-ul mb-0">
-                  <li>
-                    <i class="fa-li fa fa-check" aria-hidden="true"></i>Desenvolvimento Web - React, GraphQL, SemanticUI, Node.JS
-                  </li>
-                  <li>
-                    <i class="fa-li fa fa-check" aria-hidden="true"></i>Automação de Tarefas e Processos
-                  </li>
-                  <li>
-                    <i class="fa-li fa fa-check" aria-hidden="true"></i>Desenvolvimento voltado para BI
-                  </li>
-                  <li>
-                    <i class="fa-li fa fa-check" aria-hidden="true"></i>Teste e Arquitetura de Software
-                  </li>
-                </ul>
-              </p>
-            </div>
-            <div class="resume-date text-md-right">
-              <span class="text-primary">Fevereiro/2018 - Novembro/2019</span>
-            </div>
-          </div>
-
-          <div class="resume-item d-flex flex-column flex-md-row mb-5">
-            <div class="resume-content mr-auto">
-              <h3 class="mb-0">Técnico de Suporte</h3>
-              <div class="subheading mb-3">Griaule Biometrics</div>
-              <p>
-                <ul class="fa-ul mb-0">
-                  <li>
-                    <i class="fa-li fa fa-check" aria-hidden="true"></i>Suporte técnico on-line
-                  </li>
-                  <li>
-                    <i class="fa-li fa fa-check" aria-hidden="true"></i>Suporte interno
-                  </li>
-                  <li>
-                    <i class="fa-li fa fa-check" aria-hidden="true"></i>Testes de soluções
-                  </li>
-                  <li>
-                    <i class="fa-li fa fa-check" aria-hidden="true"></i>Gerenciamento e testes de dispositivos biométricos
-                  </li>
-                  <li>
-                    <i class="fa-li fa fa-check" aria-hidden="true"></i>Elaboração de documentação interna e externa
-                  </li> 
-                  <li>
-                    <i class="fa-li fa fa-check" aria-hidden="true"></i>Gerenciamento de licenças
-                  </li> 
-                </ul>
-              </p>
-            </div>
-            <div class="resume-date text-md-right">
-              <span class="text-primary">Setembro/2016 - Fevereiro/2018</span>
-            </div>
-          </div>
-
-          <div class="resume-item d-flex flex-column flex-md-row">
-            <div class="resume-content mr-auto">
-              <h3 class="mb-0">Bolsista de Suporte - SAE/UNICAMP</h3>
-              <div class="subheading mb-3">Centro de Ensino de Línguas - CEL/UNICAMP</div>
-              <p>
-                <ul class="fa-ul mb-0">
-                  <li>
-                    <i class="fa-li fa fa-check" aria-hidden="true"></i>Suporte técnico aos docentes, funcionários e alunos
-                  </li>
-                  <li>
-                    <i class="fa-li fa fa-check" aria-hidden="true"></i>Instalação e manutenção dos equipamentos das salas e dos laboratórios
-                  </li>
-                  <li>
-                    <i class="fa-li fa fa-check" aria-hidden="true"></i>Instalação e manutenção de rede interna
-                  </li>
-                  <li>
-                    <i class="fa-li fa fa-check" aria-hidden="true"></i>Desenvolvimeto e manutenção do website institucional
-                  </li>
-                  <li>
-                    <i class="fa-li fa fa-check" aria-hidden="true"></i>Elaboração de documentação interna
-                  </li> 
-                </ul>
-              </p>
-            </div>
-            <div class="resume-date text-md-right">
-              <span class="text-primary">Abril/2015 - Agosto/2016</span>
-            </div>
-          </div>
-
-        </div>
-      </section>
-
-
-      <section class="resume-section p-3 p-lg-5 d-flex flex-column" id="skills">
-        <div class="my-auto">
-          <h2 class="mb-5">Habilidades</h2>
-
-          <div class="subheading mb-3">Linguagens e Ferramentas</div>
-          <div class="row">
-            <div class="col-lg-8 col-md-10 col-12">
-              <ul class="list-inline list-icons">
-                <li class="list-inline-item">
-                  <i class="devicon-html5-plain" title="HTML 5"></i>
-                </li>
-                <li class="list-inline-item">
-                  <i class="devicon-css3-plain" title="CSS 3"></i>
-                </li>
-                <li class="list-inline-item">
-                  <i class="devicon-javascript-plain" title="Javascript"></i>
-                </li>
-                <li class="list-inline-item">
-                  <i class="devicon-typescript-plain" title="Typescript"></i>
-                </li>
-                <li class="list-inline-item">
-                  <i class="devicon-bootstrap-plain" title="Bootstrap"></i>
-                </li>
-                <li class="list-inline-item">
-                  <i class="devicon-sass-plain" title="SASS"></i>
-                </li>
-                <li class="list-inline-item">
-                  <i class="devicon-nodejs-plain" title="Node.js"></i>
-                </li>
-                <li class="list-inline-item">
-                  <i class="devicon-react-plain" title="React.js"></i>
-                </li>                
-                <li class="list-inline-item">
-                  <i class="devicon-angularjs-plain" title="Angular"></i>
-                </li>
-                <li class="list-inline-item">
-                  <i class="devicon-python-plain" title="Python"></i>
-                </li>                                      
-                <li class="list-inline-item">
-                  <i class="devicon-mysql-plain" title="MySQL"></i>
-                </li>
-                <li class="list-inline-item">
-                  <i class="devicon-mongodb-plain" title="MongoDB"></i>
-                </li>
-                <li class="list-inline-item">
-                  <i class="devicon-amazonwebservices-plain" title="Amazon Web Services"></i>
-                </li>
-                <li class="list-inline-item">
-                  <i class="devicon-googlecloud-plain" title="Google Cloud Platform"></i>
-                </li>
-                <li class="list-inline-item">
-                  <i class="devicon-firebase-plain" title="Firebase"></i>
-                </li>      
-                <li class="list-inline-item">
-                  <i class="devicon-npm-original-wordmark" title="npm"></i>
-                </li>        
-                <li class="list-inline-item">
-                  <i class="devicon-yarn-plain-wordmark" title="yarn"></i>
-                </li>                     
-                <li class="list-inline-item">
-                  <i class="devicon-git-plain" title="git"></i>
-                </li>
-                <li class="list-inline-item">
-                  <i class="devicon-github-plain" title="GitHub"></i>
-                </li>
-                <li class="list-inline-item">
-                  <i class="fab fa-bitbucket" title="BitBucket"></i>
-                </li>  
-                <li class="list-inline-item">
-                  <i class="fab fa-jira" title="Jira"></i>
-                </li>   
-                <li class="list-inline-item">
-                  <i class="devicon-visualstudio-plain" title="Visual Studio Code"></i>
-                </li>     
-              </ul>
-            </div>
-          </div>
-          
-
-          <div class="subheading mb-3">Idiomas</div>
-          <ul class="fa-ul mb-0">
-            <li>
-              <i class="fa-li fa fa-check"></i><strong>Inglês</strong> Avançado
-            </li>
-            <li>
-              <i class="fa-li fa fa-check"></i><strong>Espanhol</strong> Básico
-            </li>          
-          </ul>
-        </div>
-      </section>
-
-      <section class="resume-section p-3 p-lg-5 d-flex flex-column" id="courses">
-        <div class="my-auto">
-          <h2 class="mb-5">Cursos e Certificações</h2>
-          <div class="subheading mb-3">Cursos</div>
-          <ul class="fa-ul mb-0">
-            <li>
-              <i class="fa-li fa fa-certificate text-primary"></i>Imersão em Growth Hacking - Weme School - Outubro/2019
-            </li>
-            <li>
-              <i class="fa-li fa fa-certificate text-primary"></i>Google Cloud Platform Fundamentals: Core Infrastructure - Coursera - Dezembro/2017
-            </li>
-            <li>
-              <i class="fa-li fa fa-certificate text-primary"></i>Venturus4Tech: MEAN Stack, Android e iOS - Venturus - Julho/2017
-            </li>
-            <li>
-              <i class="fa-li fa fa-certificate text-primary"></i>Microsoft Students to Business (S2B): Infraestrutura - Senac Limeira - Novembro/2011
-            </li>
-
-          </ul>
-        </div>
-      </section>
-
-      <section class="resume-section p-3 p-lg-5 d-flex flex-column" id="extra">
-        <div class="my-auto">
-          <h2 class="mb-5">Atividades Extracurriculares</h2>
-
-          <div class="resume-item d-flex flex-column flex-md-row mb-5">
-            <div class="resume-content mr-auto">
-              <h3 class="mb-0">SECOMP - Semana de Computação da UNICAMP</h3>
-              <div class="subheading mb-3">Gestões 2017 e 2018: Responsável Técnico</div>
-              <p>Gerenciamento da infraestrutura e desenvolvimento do website. Modelagem e desenvolvimento do sistema de controle de congressistas (cadastro e credenciamento, avisos, gameficação e feedbacks).</p> 
-
-              <div class="subheading mb-3">Gestão 2018: Conselheiro Administrativo</div>
-              <p>Auxílio à coordenação corrente, orientando na tomada de decisões e sanando possíveis dúvidas sobre a organização do evento.</p>              
-              
-              <div class="subheading mb-3">Gestão 2017: Coordenador de Comunicação</div>
-              <p>Planejamento e gerenciamento de todas as etapas da organização do evento. Coordenação de membros, prazos, recursos, marketing e identidade visual.</p>              
-
-              <div class="subheading mb-3">Gestão 2016: Assessor de Comunicação</div>
-              <p>Auxílio na organização do evento, principalmente em captação de recursos, divulgação/marketing e atividades operacionais.</p>              
-
-            </div>
-            <div class="resume-date text-md-right">
-              <span class="text-primary">Novembro/2015 - Novembro/2018</span>
-            </div>
-          </div>
-
-          <div class="resume-item d-flex flex-column flex-md-row"> 
-            <div class="resume-content mr-auto">
-              <h3 class="mb-0">AAACEC - Associação Atlética Acadêmica da Ciência e Engenharia de Computação</h3>
-              <div class="subheading mb-3">Gestão 2016: Coordenador de Bateria - Bateria Valorosa</div>
-              <p>Gerenciamento dos recursos da bateria. Atuação nas áreas de financeiro, patrimônio, marketing e eventos. Participação como ritmista (Março 2015 - Presente).</p>
-
-              <div class="subheading mb-3">Gestão 2016: Assessor Administrativo</div>
-              <p>Auxílio em atividades e eventos realizados pela entidade. Auxílio na organização e marketing internos da entidade.</p>
-            </div>
-            <div class="resume-date text-md-right">
-              <span class="text-primary">Outubro/2015 - Outubro/2016</span>
-            </div>
-          </div>
-
-        </div>
-      </section>
-
+  <!-- NAV -->
+  <header class="sticky top-0 z-50 bg-white/90 dark:bg-gray-950/90 backdrop-blur border-b border-gray-200 dark:border-gray-800">
+    <div class="max-w-5xl mx-auto px-4 sm:px-6 flex items-center justify-between h-14">
+      <a href="index.html" class="font-semibold text-primary-600 dark:text-primary-400 tracking-tight">leohbatista</a>
+      <nav class="flex items-center gap-1 sm:gap-2 text-sm font-medium">
+        <a href="index.html"       class="px-3 py-1.5 rounded-md bg-primary-50 dark:bg-primary-900/40 text-primary-700 dark:text-primary-300">Profile</a>
+        <a href="curriculum.html"  class="px-3 py-1.5 rounded-md text-gray-600 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors">Curriculum</a>
+        <a href="content.html"     class="px-3 py-1.5 rounded-md text-gray-600 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors">Content</a>
+        <button id="theme-toggle" aria-label="Toggle dark mode"
+          class="ml-2 p-2 rounded-md text-gray-500 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors">
+          <svg id="icon-sun" class="w-4 h-4 hidden dark:block" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+              d="M12 3v1m0 16v1m8.66-9h-1M4.34 12h-1m15.07-6.07-.707.707M6.343 17.657l-.707.707M17.657 17.657l-.707-.707M6.343 6.343l-.707-.707M12 5a7 7 0 100 14A7 7 0 0012 5z"/>
+          </svg>
+          <svg id="icon-moon" class="w-4 h-4 block dark:hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+              d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z"/>
+          </svg>
+        </button>
+      </nav>
     </div>
+  </header>
 
-    <!-- Bootstrap core JavaScript -->
-    <script src="vendor/jquery/jquery.min.js"></script>
-    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <main class="max-w-5xl mx-auto px-4 sm:px-6 py-16">
 
-    <!-- Plugin JavaScript -->
-    <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
+    <!-- HERO -->
+    <section class="flex flex-col sm:flex-row items-center sm:items-start gap-8 mb-16">
+      <img src="img/profile.jpg" alt="Leonardo H. Batista"
+        class="w-36 h-36 rounded-full object-cover ring-4 ring-primary-500 shadow-lg flex-shrink-0" />
+      <div>
+        <h1 class="text-4xl sm:text-5xl font-bold tracking-tight mb-1">
+          Leonardo <span class="text-primary-600 dark:text-primary-400">Batista</span>
+        </h1>
+        <p class="text-xl text-gray-500 dark:text-gray-400 font-medium mb-4">
+          Solutions Architect &amp; Tech Lead · AWS Certified
+        </p>
+        <p class="text-gray-600 dark:text-gray-400 leading-relaxed max-w-2xl mb-6">
+          Computer Science graduate from UNICAMP building fintech products at OneBlinc. Focused on Python,
+          Django and AWS — from backend APIs to cloud architecture and DevSecOps. Speaking at DjangoCon US 2026
+          in Chicago on "Scaling Django: Mastering Database Routers with AWS Aurora".
+        </p>
+        <div class="flex flex-wrap gap-3">
+          <a href="https://www.linkedin.com/in/leonardohenriquebatista/" target="_blank" rel="noopener"
+            class="inline-flex items-center gap-2 px-4 py-2 rounded-lg bg-primary-600 hover:bg-primary-700 text-white text-sm font-medium transition-colors">
+            <i class="fab fa-linkedin"></i> LinkedIn
+          </a>
+          <a href="https://github.com/leohbatista" target="_blank" rel="noopener"
+            class="inline-flex items-center gap-2 px-4 py-2 rounded-lg border border-gray-300 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-800 text-sm font-medium transition-colors">
+            <i class="fab fa-github"></i> GitHub
+          </a>
+        </div>
+      </div>
+    </section>
 
-    <!-- Custom scripts for this template -->
-    <script src="js/resume.min.js"></script>
+    <!-- ABOUT -->
+    <section class="mb-16">
+      <h2 class="text-2xl font-bold mb-4 flex items-center gap-2">
+        <span class="w-1 h-6 bg-primary-500 rounded-full inline-block"></span>
+        About
+      </h2>
+      <div class="prose prose-gray dark:prose-invert max-w-none">
+        <p class="text-gray-700 dark:text-gray-300 leading-relaxed mb-3">
+          Solutions Architect and Tech Lead at OneBlinc, building fintech products for the US market.
+          Over 8 years of experience across backend and fullstack development — currently focused on
+          Python, Django, AWS and software architecture. AWS Certified Solutions Architect with additional
+          credentials in serverless and application networking.
+        </p>
+        <p class="text-gray-700 dark:text-gray-300 leading-relaxed">
+          Active in the tech community: speaking at DjangoCon US 2026 in Chicago (Aug 24–26) on
+          "Scaling Django: Mastering Database Routers with AWS Aurora". Podcast guest on topics like
+          Clean Code and career development. Interested in cloud security, FinOps and process automation.
+        </p>
+      </div>
+    </section>
 
-  </body>
+    <!-- SKILLS -->
+    <section class="mb-16">
+      <h2 class="text-2xl font-bold mb-6 flex items-center gap-2">
+        <span class="w-1 h-6 bg-primary-500 rounded-full inline-block"></span>
+        Skills &amp; Technologies
+      </h2>
+      <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div class="p-4 rounded-xl border border-gray-200 dark:border-gray-800 bg-gray-50 dark:bg-gray-900">
+          <h3 class="text-sm font-semibold text-primary-600 dark:text-primary-400 uppercase tracking-wider mb-3">Architecture &amp; Leadership</h3>
+          <div class="flex flex-wrap gap-2">
+            <span class="tech-tag">Software Architecture</span>
+            <span class="tech-tag">Solutions Architecture</span>
+            <span class="tech-tag">Project Management</span>
+            <span class="tech-tag">Process Automation</span>
+            <span class="tech-tag">Clean Code</span>
+          </div>
+        </div>
+        
+        <div class="p-4 rounded-xl border border-gray-200 dark:border-gray-800 bg-gray-50 dark:bg-gray-900">
+          <h3 class="text-sm font-semibold text-primary-600 dark:text-primary-400 uppercase tracking-wider mb-3">Backend</h3>
+          <div class="flex flex-wrap gap-2">
+            <span class="tech-tag">Python</span>
+            <span class="tech-tag">Django</span>
+            <span class="tech-tag">REST APIs</span>
+            <span class="tech-tag">PostgreSQL</span>
+            <span class="tech-tag">Node.js</span>
+          </div>
+        </div>
+        
+        <div class="p-4 rounded-xl border border-gray-200 dark:border-gray-800 bg-gray-50 dark:bg-gray-900">
+          <h3 class="text-sm font-semibold text-primary-600 dark:text-primary-400 uppercase tracking-wider mb-3">Cloud &amp; AWS</h3>
+          <div class="flex flex-wrap gap-2">
+            <span class="tech-tag">Serverless</span>
+            <span class="tech-tag">Monitoring</span>
+            <span class="tech-tag">CI/CD</span>
+            <span class="tech-tag">FinOps</span>
+            <span class="tech-tag">Lambda</span>
+            <span class="tech-tag">ECS</span>
+            <span class="tech-tag">ELB</span>
+            <span class="tech-tag">CloudFront</span>
+            <span class="tech-tag">VPC</span>
+          </div>
+        </div>
 
+        <div class="p-4 rounded-xl border border-gray-200 dark:border-gray-800 bg-gray-50 dark:bg-gray-900">
+          <h3 class="text-sm font-semibold text-primary-600 dark:text-primary-400 uppercase tracking-wider mb-3">Security</h3>
+          <div class="flex flex-wrap gap-2">
+            <span class="tech-tag">DevSecOps</span>
+            <span class="tech-tag">Cloud Security</span>
+            <span class="tech-tag">Incident Response</span>
+            <span class="tech-tag">Cybersecurity</span>
+            <span class="tech-tag">Cyber Defense</span>
+            <span class="tech-tag">Governance</span>
+          </div>
+        </div>
+
+        <div class="p-4 rounded-xl border border-gray-200 dark:border-gray-800 bg-gray-50 dark:bg-gray-900">
+          <h3 class="text-sm font-semibold text-primary-600 dark:text-primary-400 uppercase tracking-wider mb-3">Frontend</h3>
+          <div class="flex flex-wrap gap-2">
+            <span class="tech-tag">TypeScript</span>
+            <span class="tech-tag">JavaScript</span>
+            <span class="tech-tag">HTML5 / CSS</span>
+            <span class="tech-tag">Firebase</span>
+          </div>
+        </div>
+
+        
+
+      </div>
+    </section>
+
+    <!-- AWS CERTIFICATIONS -->
+    <section class="mb-16">
+      <h2 class="text-2xl font-bold mb-6 flex items-center gap-2">
+        <span class="w-1 h-6 bg-primary-500 rounded-full inline-block"></span>
+        AWS Certifications
+      </h2>
+      <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-4">
+
+        <a href="https://www.credly.com/badges/af0ea1c6-12b2-4efc-bd12-58aef3309a30" target="_blank" rel="noopener"
+          class="flex flex-col items-center gap-2 p-4 rounded-xl border border-gray-200 dark:border-gray-800 bg-gray-50 dark:bg-gray-900 hover:border-primary-400 dark:hover:border-primary-600 transition-colors text-center group">
+          <img src="img/certification-badges/aws-saa.png"
+            alt="AWS Certified Solutions Architect - Associate"
+            class="w-20 h-20 object-contain" />
+          <span class="text-xs font-medium text-gray-700 dark:text-gray-300 group-hover:text-primary-600 dark:group-hover:text-primary-400 leading-tight">Solutions Architect - Associate</span>
+          <span class="text-xs text-gray-400 dark:text-gray-500">Apr 2025</span>
+        </a>
+
+        <a href="https://www.credly.com/badges/e0b308de-5952-4989-ac66-e2607ac70490" target="_blank" rel="noopener"
+          class="flex flex-col items-center gap-2 p-4 rounded-xl border border-gray-200 dark:border-gray-800 bg-gray-50 dark:bg-gray-900 hover:border-primary-400 dark:hover:border-primary-600 transition-colors text-center group">
+          <img src="img/certification-badges/aws-dva.png"
+            alt="AWS Certified Developer - Associate"
+            class="w-20 h-20 object-contain" />
+          <span class="text-xs font-medium text-gray-700 dark:text-gray-300 group-hover:text-primary-600 dark:group-hover:text-primary-400 leading-tight">Developer - Associate</span>
+          <span class="text-xs text-gray-400 dark:text-gray-500">Nov 2024</span>
+        </a>
+
+        <a href="https://www.credly.com/badges/fa4a66a7-7d81-48b8-aaf9-db85ad786cea" target="_blank" rel="noopener"
+          class="flex flex-col items-center gap-2 p-4 rounded-xl border border-gray-200 dark:border-gray-800 bg-gray-50 dark:bg-gray-900 hover:border-primary-400 dark:hover:border-primary-600 transition-colors text-center group">
+          <img src="img/certification-badges/aws-cpr.png"
+            alt="AWS Certified Cloud Practitioner"
+            class="w-20 h-20 object-contain" />
+          <span class="text-xs font-medium text-gray-700 dark:text-gray-300 group-hover:text-primary-600 dark:group-hover:text-primary-400 leading-tight">Cloud Practitioner</span>
+          <span class="text-xs text-gray-400 dark:text-gray-500">Sep 2024</span>
+        </a>
+
+        <a href="https://www.credly.com/badges/b570767b-20e3-45e8-bcba-d39965914d88" target="_blank" rel="noopener"
+          class="flex flex-col items-center gap-2 p-4 rounded-xl border border-gray-200 dark:border-gray-800 bg-gray-50 dark:bg-gray-900 hover:border-primary-400 dark:hover:border-primary-600 transition-colors text-center group">
+          <img src="img/certification-badges/aws-wap.png"
+            alt="Well-Architected Proficient"
+            class="w-20 h-20 object-contain" />
+          <span class="text-xs font-medium text-gray-700 dark:text-gray-300 group-hover:text-primary-600 dark:group-hover:text-primary-400 leading-tight">Well-Architected Proficient</span>
+          <span class="text-xs text-gray-400 dark:text-gray-500">Feb 2025</span>
+        </a>
+
+        <a href="https://www.credly.com/badges/08204ca4-22fc-443c-bd26-60f030f17668" target="_blank" rel="noopener"
+          class="flex flex-col items-center gap-2 p-4 rounded-xl border border-gray-200 dark:border-gray-800 bg-gray-50 dark:bg-gray-900 hover:border-primary-400 dark:hover:border-primary-600 transition-colors text-center group">
+          <img src="img/certification-badges/aws-mc-ant.png"
+            alt="AWS Application Networking Demonstrated"
+            class="w-20 h-20 object-contain" />
+          <span class="text-xs font-medium text-gray-700 dark:text-gray-300 group-hover:text-primary-600 dark:group-hover:text-primary-400 leading-tight">Application Networking Demonstrated</span>
+          <span class="text-xs text-gray-400 dark:text-gray-500">May 2026</span>
+        </a>
+
+        <a href="https://www.credly.com/badges/7fe35790-0918-438b-b225-0f0517d80847" target="_blank" rel="noopener"
+          class="flex flex-col items-center gap-2 p-4 rounded-xl border border-gray-200 dark:border-gray-800 bg-gray-50 dark:bg-gray-900 hover:border-primary-400 dark:hover:border-primary-600 transition-colors text-center group">
+          <img src="img/certification-badges/aws-mc-svl.png"
+            alt="AWS Serverless Demonstrated"
+            class="w-20 h-20 object-contain" />
+          <span class="text-xs font-medium text-gray-700 dark:text-gray-300 group-hover:text-primary-600 dark:group-hover:text-primary-400 leading-tight">Serverless Demonstrated</span>
+          <span class="text-xs text-gray-400 dark:text-gray-500">May 2026</span>
+        </a>
+
+        <a href="https://www.credly.com/badges/8dbb833d-7f0a-4442-9658-5c33517daf5e" target="_blank" rel="noopener"
+          class="flex flex-col items-center gap-2 p-4 rounded-xl border border-gray-200 dark:border-gray-800 bg-gray-50 dark:bg-gray-900 hover:border-primary-400 dark:hover:border-primary-600 transition-colors text-center group">
+          <img src="img/certification-badges/aws-cq-sar.png"
+            alt="AWS Cloud Quest: Solutions Architect"
+            class="w-20 h-20 object-contain" />
+          <span class="text-xs font-medium text-gray-700 dark:text-gray-300 group-hover:text-primary-600 dark:group-hover:text-primary-400 leading-tight">Cloud Quest: Solutions Architect</span>
+          <span class="text-xs text-gray-400 dark:text-gray-500">Mar 2025</span>
+        </a>
+
+      </div>
+    </section>
+
+    <!-- QUICK LINKS -->
+    <section>
+      <h2 class="text-2xl font-bold mb-6 flex items-center gap-2">
+        <span class="w-1 h-6 bg-primary-500 rounded-full inline-block"></span>
+        Explore
+      </h2>
+      <div class="grid sm:grid-cols-2 gap-4">
+        <a href="curriculum.html"
+          class="group p-5 rounded-xl border border-gray-200 dark:border-gray-800 hover:border-primary-400 dark:hover:border-primary-600 bg-gray-50 dark:bg-gray-900 hover:bg-primary-50 dark:hover:bg-primary-950 transition-all">
+          <div class="flex items-center gap-3 mb-2">
+            <span class="text-2xl">📄</span>
+            <h3 class="font-semibold group-hover:text-primary-600 dark:group-hover:text-primary-400 transition-colors">Curriculum</h3>
+          </div>
+          <p class="text-sm text-gray-500 dark:text-gray-400">Work experience, education, certifications and extracurriculars.</p>
+        </a>
+        <a href="content.html"
+          class="group p-5 rounded-xl border border-gray-200 dark:border-gray-800 hover:border-primary-400 dark:hover:border-primary-600 bg-gray-50 dark:bg-gray-900 hover:bg-primary-50 dark:hover:bg-primary-950 transition-all">
+          <div class="flex items-center gap-3 mb-2">
+            <span class="text-2xl">🎙️</span>
+            <h3 class="font-semibold group-hover:text-primary-600 dark:group-hover:text-primary-400 transition-colors">Content</h3>
+          </div>
+          <p class="text-sm text-gray-500 dark:text-gray-400">Talks, videos and materials from events and conferences.</p>
+        </a>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="border-t border-gray-200 dark:border-gray-800 mt-16 py-8 text-center text-sm text-gray-400 dark:text-gray-600">
+    <p>© 2026 Leonardo H. Batista · Campinas, Brazil</p>
+  </footer>
+
+  <script>
+    document.getElementById('theme-toggle').addEventListener('click', () => {
+      const html = document.documentElement;
+      if (html.classList.contains('dark')) {
+        html.classList.remove('dark');
+        localStorage.setItem('theme', 'light');
+      } else {
+        html.classList.add('dark');
+        localStorage.setItem('theme', 'dark');
+      }
+    });
+  </script>
+
+</body>
 </html>

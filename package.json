@@ -1,44 +1,17 @@
 {
-  "title": "Resume",
-  "name": "startbootstrap-resume",
-  "version": "4.0.0-beta.2",
-  "description": "Resume is a simple, yet elegant resume and CV theme for Bootstrap 4.",
-  "keywords": [
-    "css",
-    "sass",
-    "html",
-    "responsive",
-    "theme",
-    "template"
-  ],
-  "homepage": "https://startbootstrap.com/template-overviews/resume",
-  "bugs": {
-    "url": "https://github.com/BlackrockDigital/startbootstrap-resume/issues",
-    "email": "feedback@startbootstrap.com"
-  },
+  "name": "leohbatista-github-io",
+  "version": "1.0.0",
+  "description": "Leonardo H. Batista - Personal Website",
   "license": "MIT",
-  "author": "Start Bootstrap",
-  "contributors": [
-    "David Miller (http://davidmiller.io/)"
-  ],
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/BlackrockDigital/startbootstrap-resume.git"
+  "scripts": {
+    "build": "npm run copy-assets && tailwindcss -i ./src/input.css -o ./dist/output.css --minify",
+    "dev": "npm run copy-assets && tailwindcss -i ./src/input.css -o ./dist/output.css --watch",
+    "copy-assets": "mkdir -p webfonts dist/fonts && cp node_modules/@fortawesome/fontawesome-free/css/all.min.css dist/fa.min.css && cp node_modules/@fortawesome/fontawesome-free/webfonts/* webfonts/ && cp node_modules/devicon/devicon.min.css dist/devicon.min.css && cp node_modules/devicon/fonts/* dist/fonts/"
   },
   "dependencies": {
-    "bootstrap": "^4.0.0-beta.2",
-    "devicons": "^1.8.0",
-    "jquery": "^3.2.1",
-    "popper.js": "^1.12.6",
-    "simple-line-icons": "^2.4.1"
-  },
-  "devDependencies": {
-    "browser-sync": "2.18.13",
-    "gulp": "^3.9.1",
-    "gulp-clean-css": "3.9.0",
-    "gulp-header": "1.8.9",
-    "gulp-rename": "^1.2.2",
-    "gulp-sass": "^3.1.0",
-    "gulp-uglify": "3.0.0"
+    "@fortawesome/fontawesome-free": "^7.2.0",
+    "@tailwindcss/cli": "^4.3.1",
+    "devicon": "^2.17.0",
+    "tailwindcss": "^4.3.1"
   }
 }
