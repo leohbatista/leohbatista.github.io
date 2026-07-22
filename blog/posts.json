@@ -1,0 +1,7 @@
+[
+  {
+    "title": "Welcome to the Blog",
+    "description": "A quick introduction to this blog and how it's built — posts are plain markdown files loaded on demand.",
+    "slug": "welcome-to-the-blog"
+  }
+]
