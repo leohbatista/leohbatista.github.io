@@ -6,9 +6,15 @@ author: Leonardo H. Batista
 
 # Lorem Ipsum Example
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor
+[Lorem ipsum dolor sit amet](/), consectetur adipiscing elit. Sed do eiusmod tempor
 incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis
 nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+
+![Placeholder example image](/blog/img/example.jpg)
+
+Same image resized with the `=WxH` suffix (width only, in this case):
+
+![Resized example image](/blog/img/example.jpg =200x)
 
 ## Section One
 
@@ -36,3 +42,23 @@ Nisi ut aliquid ex ea commodi consequatur.
 Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse
 quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo
 voluptas nulla pariatur.
+
+---
+
+## Section Three
+
+An ordered list, a struck-through word, and a table:
+
+1. Lorem ipsum dolor sit amet
+2. Consectetur adipiscing elit
+3. Sed do eiusmod tempor incididunt
+
+### Subsection
+
+This sentence used to say ~~consectetur~~ adipiscing.
+
+| Section | Words | Alignment |
+| :--- | ---: | :---: |
+| One | 42 | left |
+| Two | 58 | right |
+| Three | 31 | center |

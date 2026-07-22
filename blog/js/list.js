@@ -3,9 +3,9 @@ const PAGE_SIZE = 5;
 function cardTemplate(post) {
   return `
     <a href="/blog/posts/${encodeURIComponent(post.slug)}"
-      class="group block p-5 rounded-xl border border-gray-200 dark:border-gray-800 hover:border-primary-400 dark:hover:border-primary-600 bg-gray-50 dark:bg-gray-900 hover:bg-primary-50 dark:hover:bg-primary-950 transition-all">
+      class="group block p-5 rounded-xl border border-zinc-200 dark:border-zinc-800 hover:border-primary-400 dark:hover:border-primary-600 bg-zinc-50 dark:bg-zinc-900 hover:bg-primary-50 dark:hover:bg-primary-950 transition-all">
       <h3 class="font-semibold text-lg mb-1 group-hover:text-primary-600 dark:group-hover:text-primary-400 transition-colors">${post.title}</h3>
-      <p class="text-sm text-gray-500 dark:text-gray-400">${post.description}</p>
+      <p class="text-sm text-zinc-500 dark:text-zinc-400">${post.description}</p>
     </a>`;
 }
 
@@ -18,10 +18,10 @@ function renderPagination(page, totalPages) {
 
   el.innerHTML = `
     <a href="?page=${page - 1}" aria-disabled="${prevDisabled}"
-      class="px-3 py-1.5 rounded-md text-sm font-medium border border-gray-300 dark:border-gray-700 ${prevDisabled ? 'pointer-events-none opacity-40' : 'hover:bg-gray-100 dark:hover:bg-gray-800'}">Previous</a>
-    <span class="text-sm text-gray-500 dark:text-gray-400">Page ${page} of ${totalPages}</span>
+      class="px-3 py-1.5 rounded-md text-sm font-medium border border-zinc-300 dark:border-zinc-700 ${prevDisabled ? 'pointer-events-none opacity-40' : 'hover:bg-zinc-100 dark:hover:bg-zinc-800'}">Previous</a>
+    <span class="text-sm text-zinc-500 dark:text-zinc-400">Page ${page} of ${totalPages}</span>
     <a href="?page=${page + 1}" aria-disabled="${nextDisabled}"
-      class="px-3 py-1.5 rounded-md text-sm font-medium border border-gray-300 dark:border-gray-700 ${nextDisabled ? 'pointer-events-none opacity-40' : 'hover:bg-gray-100 dark:hover:bg-gray-800'}">Next</a>`;
+      class="px-3 py-1.5 rounded-md text-sm font-medium border border-zinc-300 dark:border-zinc-700 ${nextDisabled ? 'pointer-events-none opacity-40' : 'hover:bg-zinc-100 dark:hover:bg-zinc-800'}">Next</a>`;
 }
 
 async function initBlogList() {
@@ -30,10 +30,10 @@ async function initBlogList() {
 
   let posts;
   try {
-    const res = await fetch('posts.json');
+    const res = await fetch('/blog/posts.json');
     posts = await res.json();
   } catch (err) {
-    container.innerHTML = '<p class="text-gray-500 dark:text-gray-400">Could not load posts.</p>';
+    container.innerHTML = '<p class="text-zinc-500 dark:text-zinc-400">Could not load posts.</p>';
     return;
   }
 
@@ -43,7 +43,7 @@ async function initBlogList() {
 
   container.innerHTML = pagePosts.length
     ? pagePosts.map(cardTemplate).join('')
-    : '<p class="text-gray-500 dark:text-gray-400">No posts yet.</p>';
+    : '<p class="text-zinc-500 dark:text-zinc-400">No posts yet.</p>';
 
   renderPagination(page, totalPages);
 }

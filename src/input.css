@@ -25,14 +25,30 @@
   }
 }
 
-/* Unlayered so it beats the typography plugin's layered `code::before/after` backticks. */
+/* Unlayered so these beat the typography plugin's layered defaults. */
+
+/* Drop the plugin's `code::before/after` backticks. */
 .prose code::before,
 .prose code::after {
   content: none;
 }
 
+/* Inline code: subtle chip that lifts off the page. */
+.prose :not(pre) > code {
+  @apply rounded bg-zinc-100 px-1.5 py-0.5 text-sm font-medium text-zinc-800 dark:bg-zinc-800 dark:text-zinc-200;
+}
+
+/* Code blocks: a bordered, darker surface with clear contrast against the page in both themes. */
+.prose pre {
+  @apply border border-zinc-200 bg-zinc-900 text-zinc-100 dark:border-zinc-700 dark:bg-zinc-950;
+}
+
+.prose pre code {
+  @apply text-inherit;
+}
+
 @layer components {
   .tech-tag {
-    @apply px-2.5 py-1 rounded-md bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 text-xs text-gray-700 dark:text-gray-300 font-medium;
+    @apply px-2.5 py-1 rounded-md bg-white dark:bg-zinc-700 border border-zinc-200 dark:border-zinc-600 text-xs text-zinc-700 dark:text-zinc-300 font-medium;
   }
 }

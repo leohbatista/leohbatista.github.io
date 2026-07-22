@@ -6,7 +6,12 @@
   "scripts": {
     "build": "npm run copy-assets && tailwindcss -i ./src/input.css -o ./dist/output.css --minify",
     "dev": "npm run copy-assets && tailwindcss -i ./src/input.css -o ./dist/output.css --watch",
-    "copy-assets": "mkdir -p webfonts dist/fonts && cp node_modules/@fortawesome/fontawesome-free/css/all.min.css dist/fa.min.css && cp node_modules/@fortawesome/fontawesome-free/webfonts/* webfonts/ && cp node_modules/devicon/devicon.min.css dist/devicon.min.css && cp node_modules/devicon/fonts/* dist/fonts/"
+    "copy-assets": "mkdir -p webfonts dist/fonts && cp node_modules/@fortawesome/fontawesome-free/css/all.min.css dist/fa.min.css && cp node_modules/@fortawesome/fontawesome-free/webfonts/* webfonts/ && cp node_modules/devicon/devicon.min.css dist/devicon.min.css && cp node_modules/devicon/fonts/* dist/fonts/",
+    "serve": "serve . -l 4173",
+    "verify": "npm ci && npm run build && git diff --exit-code -- dist/output.css"
+  },
+  "devDependencies": {
+    "serve": "^14.2.6"
   },
   "dependencies": {
     "@fortawesome/fontawesome-free": "^7.2.0",
