@@ -1,4 +1,5 @@
 @import "tailwindcss";
+@plugin "@tailwindcss/typography";
 
 @custom-variant dark (&:where(.dark, .dark *));
 
@@ -22,6 +23,12 @@
   html {
     font-family: var(--font-sans);
   }
+}
+
+/* Unlayered so it beats the typography plugin's layered `code::before/after` backticks. */
+.prose code::before,
+.prose code::after {
+  content: none;
 }
 
 @layer components {
