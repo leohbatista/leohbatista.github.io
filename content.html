@@ -96,6 +96,10 @@
             </a>
           </div>
           <div class="px-5 py-3 border-t border-zinc-200 dark:border-zinc-700 flex items-center gap-3">
+            <a href="https://2026.djangocon.us/" target="_blank" rel="noopener"
+              class="inline-flex items-center gap-1.5 text-xs font-medium text-primary-600 dark:text-primary-400 hover:underline">
+              <i class="fas fa-external-link-alt"></i> Conference website
+            </a>
             <a href="https://2026.djangocon.us/news/announcing-lineup/" target="_blank" rel="noopener"
               class="inline-flex items-center gap-1.5 text-xs font-medium text-primary-600 dark:text-primary-400 hover:underline">
               <i class="fas fa-external-link-alt"></i> Speaker announcement
@@ -191,29 +195,66 @@
     </section>
 
     <!-- WRITTEN -->
-    <section>
+    <section class="mb-16">
       <h2 class="text-2xl font-bold mb-8 flex items-center gap-2">
         <span class="w-1 h-6 bg-primary-500 rounded-full inline-block"></span>
         Written Materials
       </h2>
 
-      <div class="p-10 rounded-xl border-2 border-dashed border-zinc-200 dark:border-zinc-700 flex flex-col items-center justify-center text-center gap-3">
-        <span class="text-4xl">📝</span>
-        <p class="text-zinc-500 dark:text-zinc-400 text-sm">Articles, slide decks and other written materials will appear here.</p>
-        <a href="https://github.com/leohbatista" target="_blank" rel="noopener"
-          class="inline-flex items-center gap-2 px-4 py-2 rounded-lg border border-zinc-300 dark:border-zinc-600 hover:bg-zinc-50 dark:hover:bg-zinc-700 text-sm font-medium transition-colors mt-1">
-          <i class="fab fa-github"></i> See projects on GitHub
+      <div class="grid sm:grid-cols-2 gap-5">
+
+        <a href="blog/index.html"
+          class="flex flex-col rounded-xl border border-zinc-200 dark:border-zinc-700 bg-zinc-50 dark:bg-zinc-800 overflow-hidden hover:border-primary-400 dark:hover:border-primary-600 transition-colors">
+          <div class="p-5 flex-1">
+            <div class="flex items-center gap-2 mb-3">
+              <span class="px-2 py-0.5 rounded text-xs font-medium bg-primary-100 dark:bg-primary-900 text-primary-700 dark:text-primary-300">Blog</span>
+            </div>
+            <h3 class="font-semibold mb-1">Articles &amp; Notes</h3>
+            <p class="text-sm text-zinc-600 dark:text-zinc-400">
+              Posts on backend development, cloud architecture and lessons from building fintech products.
+            </p>
+          </div>
+          <div class="px-5 py-3 border-t border-zinc-200 dark:border-zinc-700 flex items-center gap-3">
+            <span class="inline-flex items-center gap-1.5 text-xs font-medium text-primary-600 dark:text-primary-400">
+              <i class="fas fa-arrow-right"></i> Read the blog
+            </span>
+          </div>
         </a>
+
       </div>
+    </section>
+
+    <!-- GITHUB PROJECTS -->
+    <section>
+      <h2 class="text-2xl font-bold mb-8 flex items-center gap-2">
+        <span class="w-1 h-6 bg-primary-500 rounded-full inline-block"></span>
+        GitHub Projects
+      </h2>
+
+      <a href="https://github.com/leohbatista" target="_blank" rel="noopener"
+        class="group flex items-center justify-between gap-4 p-6 rounded-xl border border-zinc-200 dark:border-zinc-700 bg-zinc-50 dark:bg-zinc-800 hover:border-primary-400 dark:hover:border-primary-600 transition-colors">
+        <div class="flex items-center gap-4">
+          <div class="w-12 h-12 rounded-full bg-zinc-900 dark:bg-zinc-700 flex items-center justify-center shrink-0">
+            <i class="fab fa-github text-white text-xl"></i>
+          </div>
+          <div>
+            <h3 class="font-semibold group-hover:text-primary-600 dark:group-hover:text-primary-400 transition-colors">Open-source work &amp; side projects</h3>
+            <p class="text-sm text-zinc-500 dark:text-zinc-400">Personal repositories, experiments and contributions — hosted on GitHub.</p>
+          </div>
+        </div>
+        <i class="fas fa-arrow-right text-zinc-400 group-hover:text-primary-500 group-hover:translate-x-1 transition-all shrink-0"></i>
+      </a>
     </section>
 
   </main>
 
   <footer class="border-t border-zinc-200 dark:border-zinc-700 mt-16 py-8 text-center text-sm text-zinc-400 dark:text-zinc-600">
-    <p>© 2026 Leonardo H. Batista · Campinas, Brazil</p>
+    <p>© <span id="year">2026</span> Leonardo H. Batista · Campinas, Brazil</p>
   </footer>
 
   <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+
     document.getElementById('theme-toggle').addEventListener('click', () => {
       const html = document.documentElement;
       if (html.classList.contains('dark')) {
