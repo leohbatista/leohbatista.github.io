@@ -9,7 +9,7 @@ async function initBlogPost() {
 
   let raw;
   try {
-    const res = await fetch(`posts/${encodeURIComponent(slug)}.md`);
+    const res = await fetch(`/blog/posts/${encodeURIComponent(slug)}.md`);
     if (!res.ok) throw new Error('not found');
     raw = await res.text();
   } catch (err) {

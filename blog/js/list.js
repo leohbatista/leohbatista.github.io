@@ -30,7 +30,7 @@ async function initBlogList() {
 
   let posts;
   try {
-    const res = await fetch('posts.json');
+    const res = await fetch('/blog/posts.json');
     posts = await res.json();
   } catch (err) {
     container.innerHTML = '<p class="text-gray-500 dark:text-gray-400">Could not load posts.</p>';
