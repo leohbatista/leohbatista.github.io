@@ -4,16 +4,6 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Page not found</title>
-  <script>
-    // GitHub Pages has no server-side routing, so /blog/posts/<slug> is served
-    // as a 404. Rewrite it to the real post template before rendering anything.
-    (function () {
-      var match = location.pathname.match(/^\/blog\/posts\/([^/]+)\/?$/);
-      if (match) {
-        location.replace('/blog/post.html?slug=' + encodeURIComponent(match[1]));
-      }
-    })();
-  </script>
   <link rel="icon" href="/img/favicon.ico" />
   <link rel="stylesheet" href="/dist/output.css" />
 </head>

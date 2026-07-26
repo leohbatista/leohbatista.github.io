@@ -12,7 +12,7 @@ its `slug`, and is fetched and rendered client-side when this page loads.
 ## How it works
 
 - The list page reads `blog/posts.json` for the title, description and slug of each post.
-- Each entry links to `/blog/posts/<slug>`.
+- Each entry links to `/blog/post.html?slug=<slug>`.
 - This page reads the `slug` from the URL, fetches `posts/<slug>.md`, strips the
   metadata block above, and renders the rest as HTML.
 

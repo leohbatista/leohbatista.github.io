@@ -2,7 +2,7 @@ const PAGE_SIZE = 5;
 
 function cardTemplate(post) {
   return `
-    <a href="/blog/posts/${encodeURIComponent(post.slug)}"
+    <a href="/blog/post.html?slug=${encodeURIComponent(post.slug)}"
       class="group block p-5 rounded-xl border border-zinc-200 dark:border-zinc-800 hover:border-primary-400 dark:hover:border-primary-600 bg-zinc-50 dark:bg-zinc-900 hover:bg-primary-50 dark:hover:bg-primary-950 transition-all">
       <h3 class="font-semibold text-lg mb-1 group-hover:text-primary-600 dark:group-hover:text-primary-400 transition-colors">${post.title}</h3>
       <p class="text-sm text-zinc-500 dark:text-zinc-400">${post.description}</p>
