@@ -38,6 +38,16 @@
   @apply rounded bg-zinc-100 px-1.5 py-0.5 text-sm font-medium text-zinc-800 dark:bg-zinc-800 dark:text-zinc-200;
 }
 
+/* Standalone images sit centred in the column. */
+.prose .post-figure {
+  text-align: center;
+}
+
+.prose .post-figure > img {
+  display: inline-block;
+  margin-inline: auto;
+}
+
 /* Code blocks: a bordered, darker surface with clear contrast against the page in both themes. */
 .prose pre {
   @apply border border-zinc-200 bg-zinc-900 text-zinc-100 dark:border-zinc-700 dark:bg-zinc-950;

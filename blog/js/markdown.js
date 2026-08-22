@@ -34,7 +34,7 @@ function renderImage(alt, src, width, height) {
 
 function renderInline(text) {
   let html = escapeHtml(text);
-  // ![alt](src =WxH) — size suffix is optional; W and/or H may be omitted (e.g. =300x, =x200, =300x200).
+  // ![alt](src =WxH) - size suffix is optional; W and/or H may be omitted (e.g. =300x, =x200, =300x200).
   html = html.replace(/!\[([^\]]*)\]\(([^)\s]+)(?:\s+=(\d+)?x(\d+)?)?\)/g, (match, alt, src, width, height) =>
     renderImage(alt, src, width, height)
   );
@@ -163,7 +163,10 @@ function renderMarkdown(markdown) {
       paragraph.push(lines[i]);
       i++;
     }
-    htmlParts.push(`<p>${renderInline(paragraph.join(' '))}</p>`);
+    const inline = renderInline(paragraph.join(' '));
+    // A paragraph holding nothing but an image is centred, as a figure would be.
+    const isStandaloneImage = /^<img [^>]*>$/.test(inline);
+    htmlParts.push(`<p${isStandaloneImage ? ' class="post-figure"' : ''}>${inline}</p>`);
   }
 
   return htmlParts.join('\n');

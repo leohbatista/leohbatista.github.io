@@ -1,7 +1,7 @@
 [
   {
-    "title": "Welcome to the Blog",
-    "description": "A quick introduction to this blog and how it's built — posts are plain markdown files loaded on demand.",
-    "slug": "welcome-to-the-blog"
+    "title": "Hi, I'm Leo",
+    "description": "A short introduction - who I am, what I was wrong about, and what I plan to write here.",
+    "slug": "about-me"
   }
 ]
